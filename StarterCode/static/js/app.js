@@ -11,11 +11,12 @@ function init() {
       dropDownMenu.append("option").text(name).property("value", name);
     });
 
-    //let selectedID = "941";
+    let selectedID = "941";
 
     datapull(selectedID);
   });
 }
+
 
 function datapull(selectedID) {
   d3.json("data/samples.json").then(function (jsonData) {
@@ -95,7 +96,7 @@ function barChart(results) {
   let layout = {
     hoverinfo: otu_labels,
     title: {
-      text: "Top 10 Microbial Species Found <br> in Subject's Belly Button",
+      text: "Top Microbial Species Found <br> in Subject",
       font: {
         size: 20,
         xanchor: "left",
@@ -118,7 +119,7 @@ function barChart(results) {
     },
     xaxis: {
       title: {
-        text: "Num. Microbial Species",
+        text: "Number. Microbial Species",
         font: {
           family: "Overpass, Open Sans, Raleway",
           size: 11,
